@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
+    <title>注册</title>
+    <script src="common/common.js"></script>
+    <style>
+        /*去除默认样式*/
+        html,body,div,p,input,span,a,form,button{
+            margin:0;
+            padding:0;
+        }
+        a,a:hover,a:active,a:visited,a:link,a:focus{
+            color:#fff;
+            text-decoration:none;
+            background:none;
+            outline:none;
+        }
+        input,button{
+            border:none;
+            outline:none;
+            background:none;
+        }
+        /*内容样式*/
+        .mainBlock{
+            width:88.888889%;
+            margin:0 auto;
+        }
+        /*提示*/
+        .tips{
+            width:100%;
+            padding:1.5rem 0 2rem 0;
+        }
+        .tips p{
+            font-size:0.45rem;
+            color:#9c9c9c;
+        }
+        .tips p .left{
+            float: left;
+        }
+        .tips p .right{
+            float: right;
+        }
+        /*input样式*/
+        .loginForm .userBlock{
+            margin-bottom:0.8rem;
+        }
+        .loginForm .passBlock{
+            margin-bottom:0.9rem;
+        }
+        .loginForm .inputP{
+            height:0.5rem;
+            border-bottom:1px solid #ccc;
+            box-sizing: border-box;
+            padding:0 0.07rem 0.7rem; 
+        }
+        .loginForm .textP{
+            font-size:0.45rem;
+            display:none;
+        }
+        .loginForm .inputP span{
+            display:inline-block;
+            width:6.41%;
+            height:0.45rem;
+            float:left;
+            background:url(images/usericon.png) no-repeat center left; 
+        }
+        .loginForm .passBlock .inputP span{
+            background:url(images/passicon.png) no-repeat center left; 
+        }
+        .loginForm .inputP input{
+            width:93%;
+            float:left;
+            height:0.45rem;
+            font-size:0.40rem;
+            color:#767676;
+        }
+        .loginForm .inputP input::-webkit-input-placeholder {
+            color: #767676;
+            line-height:0.45rem;
+        }
+        /*按钮*/
+        .btnBlock .btn{
+            width:100%;
+            height:1.5rem;
+            background:#2f72f5;
+            line-height:1.5rem;
+            color:#fff;
+            border-radius:0.1rem;
+            font-size:0.45rem;
+            text-align: center;
+            font-weight:bold;
+            margin-bottom:0.7rem;
+        }
+        .btnBlock p{
+            text-align: center;
+        }
+        .btnBlock p a{
+            font-size:0.36rem;
+            color:#000;
+        }
+        .btnBlock p a:hover{
+            color:red;
+        }
+        .btnBlock p .verificationCode{
+            margin-right:0.36rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainBlock">
+        <div class="tips">
+            <p>
+                <span class="left">未注册过的手机号将自动创建帐号</span>
+                <span class="right">注册</span>
+            </p>
+        </div>
+        <form action="" class="loginForm">
+            <div class="userBlock">
+                <p class="inputP">
+                    <span class="userIcon"></span>
+                    <input class="username" name="username" type="text" placeholder="请输入手机号">
+                </p>
+                <p class="userTips textP">请输入正确的手机号</p>
+            </div>
+            <div class="passBlock">
+                <p class="inputP">
+                    <span class="passIcon"></span>
+                    <input class="password" name="password" type="password" placeholder="请输入密码">
+                </p>
+                <p class="passTips textP">密码最少8位</p>
+            </div>
+            <div class="btnBlock">
+                <button type="submit" class="btn">登录</button>
+                <p>
+                    <a href="" class="verificationCode">手机验证码登录</a>
+                    <a href="" class="forgetPass">忘记密码</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
