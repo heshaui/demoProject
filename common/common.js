@@ -40,6 +40,13 @@ function reduction_1px(){
     doc.addEventListener('DOMContentLoaded', recalc, false);
 })(document, window);
 
+//判断页面是否是在微信浏览器打开
+//对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
+var useragent = navigator.userAgent;
+if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+    window.location.href = "wxError.html";//若不是微信浏览器，跳转到温馨error页面
+}
+
 //页面加载前调用
 reduction_1px();
 
